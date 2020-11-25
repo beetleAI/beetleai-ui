@@ -76,29 +76,8 @@ $ npm install --save-dev marked
 
 ### Steps to build project
 
-To compile the markdown to HTML and write it to a new README.html file. Create a README.md with sample markdown content and  JS script file ```generateReadMe.js```.
 
-```javascript
-var marked = require('marked');
-var fs = require('fs');
 
-var readMe = fs.readFileSync('README.md', 'utf-8');
-var markdownReadMe = marked(readMe);
-
-fs.writeFileSync('./site/README.html', markdownReadMe);
-```
-
-### Edit index.html
-Create a index.html and add the following HTML object where the README.md content should be displayed
-```html
-<object data="README.html" type="text/html"></object>
-```
-
-### Generate md files
-Then run this on the command line to make it happen:
-```bash
-$ node path/to/generateReadMe.js
-```
 
 ----------------------------------------------------------
 
@@ -110,23 +89,7 @@ $ node path/to/generateReadMe.js
 ### Build Setup
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+Needs to add steps
 ```
 ### How to debug VueJS apps
 
