@@ -26,11 +26,6 @@ Install [NodeJS](https://nodejs.org/en/) which install npm too.
 
 ```bash
 C:\Users\cpm\AI>npm install --global vue-cli
-npm WARN deprecated vue-cli@2.9.6: This package has been deprecated in favour of @vue/cli
-npm WARN deprecated coffee-script@1.12.7: CoffeeScript on NPM has moved to "coffeescript" (no hyphen)
-C:\Users\cpm\AppData\Roaming\npm\vue-list -> C:\Users\cpm\AppData\Roaming\npm\node_modules\vue-cli\bin\vue-list
-C:\Users\cpm\AppData\Roaming\npm\vue -> C:\Users\cpm\AppData\Roaming\npm\node_modules\vue-cli\bin\vue
-C:\Users\cpm\AppData\Roaming\npm\vue-init -> C:\Users\cpm\AppData\Roaming\npm\node_modules\vue-cli\bin\vue-init
 + vue-cli@2.9.6
 updated 1 package in 246.719s
 ```
