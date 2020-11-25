@@ -17,6 +17,9 @@ The application development requires at least 4GB of RAM to run efficiently in a
 4. Install [Gliffy ](https://chrome.google.com/webstore/detail/gliffy-diagrams/bhmicilclplefnflapjmnngmkkkkpfad?hl=en) to design and architecture software diagrams.
 5. Install [notepad ++](https://notepad-plus-plus.org/downloads/v7.8.1/), a light weight editor
 
+### Create a Github account to clone/commit your changes from/to Github server
+Signup [Github](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/signing-up-for-a-new-github-account) for free
+
 ### Install nodeJS and NPM latest stable versions  
 
 Install [NodeJS](https://nodejs.org/en/) which install npm too.
