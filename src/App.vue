@@ -1,194 +1,222 @@
 
 <template>
-  <v-app >
-    
-<v-parallax
-    height="650"
-    src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-  >
-    <v-app-bar app  absolute class="black">
-      <v-spacer>
-        <router-link to="/" class="header_logo">
-        <v-img src="@/assets/AISoftware.png" height="150px" width="150px">
-        </v-img>
-      </router-link>
-     
-
-      </v-spacer>
-      <v-spacer width="150px" right app dark class="black">
-        <div class="black"> 
-          <ul>
-            <li>
-              <v-menu  open-on-hover bottom offset-y>
-                <template v-slot:activator="{ on }">
-                  <v-btn class="black white--text" v-on="on">Solutions</v-btn>
-                </template>
-                <v-list>
-                  <v-list-item
-                    v-for="(item, index) in solutions_items"
-                    :key="index"
-                    :to="item.page"
-                  >
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </li>
-            <li>
-              <v-menu open-on-hover bottom offset-y>
-                <template v-slot:activator="{ on }">
-                  <v-btn class="black white--text" v-on="on">Services</v-btn>
-                </template>
-                <v-list>
-                  <v-list-item v-for="(item, index) in service_items" :key="index" :to="item.page">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </li>
-            <li>
-              <v-menu open-on-hover bottom offset-y>
-                <template v-slot:activator="{ on }">
-                  <v-btn class="black white--text" v-on="on">Platforms</v-btn>
-                </template>
-                <v-list>
-                  <v-list-item v-for="(item, index) in platform_items" :key="index" :to="item.page">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </li>
-            <li>
-              <v-menu open-on-hover bottom offset-y>
-                <template v-slot:activator="{ on }">
-                  <v-btn class="black white--text" v-on="on">Resources</v-btn>
-                </template>
-                <v-list>
-                  <v-list-item v-for="(item, index) in resource_items" :key="index" :to="item.page">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </li>
-            <li>
-              <v-menu open-on-hover bottom offset-y>
-                <template v-slot:activator="{ on }">
-                  <v-btn class="black white--text" v-on="on">Trainings</v-btn>
-                </template>
-                <v-list>
-                  <v-list-item v-for="(item, index) in training_items" :key="index" :to="item.page">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </li>
-            <li>
-              <v-menu open-on-hover bottom offset-y>
-                <template v-slot:activator="{ on }">
-                  <v-btn class="black white--text" v-on="on">Partners</v-btn>
-                </template>
-                <v-list>
-                  <v-list-item v-for="(item, index) in partner_items" :key="index" :to="item.page">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </li>
-            <li>
-              <v-menu open-on-hover bottom offset-y>
-                <template v-slot:activator="{ on }">
-                  <v-btn class="black white--text" v-on="on">About</v-btn>
-                </template>
-                <v-list>
-                  <v-list-item v-for="(item, index) in about_items" :key="index" :to="item.page">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </li>
-          </ul>
-        </div>
-      </v-spacer>
-      <v-spacer><RegisterUser /> </v-spacer>
-      <v-spacer><Login /> </v-spacer>
-      <v-btn
-        href="https://github.com/shobancs/vue-heroku-project"
-        target="_blank"
-        text
-      >
-        <span class="mr-2 white--text">Code</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content
-      id="scroll-target"
-      style="max-height:900px"
-      class="overflow-y-auto "
-      align="center"
-      justify="center" 
+  <v-app>
+    <v-parallax
+      height="730"
+      src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
     >
-      <router-view
-        class="app_view_default"
-        v-scroll:#scroll-target="onScroll"
+      <v-app-bar app absolute class="black">
+        <v-spacer>
+          <router-link to="/" class="header_logo">
+            <v-img src="@/assets/AISoftware.png" height="150px" width="150px">
+            </v-img>
+          </router-link>
+        </v-spacer>
+        <v-spacer width="150px" right app dark class="black">
+          <div class="black">
+            <ul>
+              <li>
+                <v-menu open-on-hover bottom offset-y>
+                  <template v-slot:activator="{ on }">
+                    <v-btn class="black white--text" v-on="on">Solutions</v-btn>
+                  </template>
+                  <v-list>
+                    <v-list-item
+                      v-for="(item, index) in solutions_items"
+                      :key="index"
+                      :to="item.page"
+                    >
+                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </li>
+              <li>
+                <v-menu open-on-hover bottom offset-y>
+                  <template v-slot:activator="{ on }">
+                    <v-btn class="black white--text" v-on="on">Services</v-btn>
+                  </template>
+                  <v-list>
+                    <v-list-item
+                      v-for="(item, index) in service_items"
+                      :key="index"
+                      :to="item.page"
+                    >
+                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </li>
+              <li>
+                <v-menu open-on-hover bottom offset-y>
+                  <template v-slot:activator="{ on }">
+                    <v-btn class="black white--text" v-on="on">Platforms</v-btn>
+                  </template>
+                  <v-list>
+                    <v-list-item
+                      v-for="(item, index) in platform_items"
+                      :key="index"
+                      :to="item.page"
+                    >
+                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </li>
+              <li>
+                <v-menu open-on-hover bottom offset-y>
+                  <template v-slot:activator="{ on }">
+                    <v-btn class="black white--text" v-on="on">Resources</v-btn>
+                  </template>
+                  <v-list>
+                    <v-list-item
+                      v-for="(item, index) in resource_items"
+                      :key="index"
+                      :to="item.page"
+                    >
+                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </li>
+              <li>
+                <v-menu open-on-hover bottom offset-y>
+                  <template v-slot:activator="{ on }">
+                    <v-btn class="black white--text" v-on="on">Trainings</v-btn>
+                  </template>
+                  <v-list>
+                    <v-list-item
+                      v-for="(item, index) in training_items"
+                      :key="index"
+                      :to="item.page"
+                    >
+                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </li>
+              <li>
+                <v-menu open-on-hover bottom offset-y>
+                  <template v-slot:activator="{ on }">
+                    <v-btn class="black white--text" v-on="on">Partners</v-btn>
+                  </template>
+                  <v-list>
+                    <v-list-item
+                      v-for="(item, index) in partner_items"
+                      :key="index"
+                      :to="item.page"
+                    >
+                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </li>
+              <li>
+                <v-menu open-on-hover bottom offset-y>
+                  <template v-slot:activator="{ on }">
+                    <v-btn class="black white--text" v-on="on">About</v-btn>
+                  </template>
+                  <v-list>
+                    <v-list-item
+                      v-for="(item, index) in about_items"
+                      :key="index"
+                      :to="item.page"
+                    >
+                      <v-list-item-title>{{ item.title }}</v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </li>
+            </ul>
+          </div>
+        </v-spacer>
+        <v-spacer><RegisterUser /> </v-spacer>
+        <v-spacer><Login /> </v-spacer>
+        <v-btn
+          href="https://github.com/shobancs/vue-heroku-project"
+          target="_blank"
+          text
+        >
+          <span class="mr-2 white--text">Code</span>
+          <v-icon>mdi-open-in-new</v-icon>
+        </v-btn>
+      </v-app-bar>
+      <v-footer absolute class="font-weight-medium grey">
+        <Footer />
+      </v-footer>
+
+      <v-content
+        id="scroll-target"
+        style="max-height: 100%"
+        class="overflow-y-auto"
         align="center"
         justify="center"
-      />
-      <router-view
-        class="app_view_modal"
-        name="modal"
-        v-scroll:#scroll-target="onScroll"
-        align="center"
-        justify="center"
-      />
-    </v-content>
-    <v-navigation-drawer  permanent right app  v-model="drawer"
-         expand-on-hover  class="overflow-z-auto grey"
-       >
-      <template v-slot:prepend>
-        <v-list-item two-line>
-          <v-list-item-avatar>
-            <img src="https://e3zine.com/wp-content/uploads/2019/10/shutterstock_1111223003web.jpg" />
-          </v-list-item-avatar>
+      >
+        <router-view
+          class="app_view_default"
+          v-scroll:#scroll-target="onScroll"
+          align="center"
+          justify="center"
+        />
+        <router-view
+          class="app_view_modal"
+          name="modal"
+          v-scroll:#scroll-target="onScroll"
+          align="center"
+          justify="center"
+        />
+      </v-content>
+      <v-navigation-drawer
+        permanent
+        right
+        app
+        v-model="drawer"
+        expand-on-hover
+        class="overflow-z-auto grey"
+      >
+        <template v-slot:prepend>
+          <v-list-item two-line>
+            <v-list-item-avatar>
+              <img
+                src="https://e3zine.com/wp-content/uploads/2019/10/shutterstock_1111223003web.jpg"
+              />
+            </v-list-item-avatar>
 
-          <v-list-item-content>
-            <v-list-item-title>Guest</v-list-item-title>
-            <v-list-item-subtitle>Logged In</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </template>
+            <v-list-item-content>
+              <v-list-item-title>Guest</v-list-item-title>
+              <v-list-item-subtitle>Logged In</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </template>
 
-      <v-divider></v-divider>
+        <v-divider></v-divider>
 
-      <v-list dense>  
-        <v-list-item v-for="item in user_items" :key="item.title" :to="item.page">
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+        <v-list dense>
+          <v-list-item
+            v-for="item in user_items"
+            :key="item.title"
+            :to="item.page"
+          >
+            <v-list-item-icon>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-      <v-divider></v-divider>
-      <v-row justify="right" no-gutters app>
-         <Callus />
-      </v-row>
-     <v-row justify="right" no-gutters app>
-   
+            <v-list-item-content>
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+        <v-divider></v-divider>
+        <v-row justify="right" no-gutters app>
+          <Callus />
+        </v-row>
+        <v-row justify="right" no-gutters app>
           <Emailus />
-       
-      </v-row>
-      <v-divider></v-divider>
-    </v-navigation-drawer>
-
-    <v-footer  absolute="" class="font-weight-medium grey">
-      <Footer />
-    </v-footer>
-</v-parallax>
+        </v-row>
+        <v-divider></v-divider>
+      </v-navigation-drawer>
+    </v-parallax>
   </v-app>
-  
 </template>
         
      
@@ -207,32 +235,32 @@ export default {
     RegisterUser,
     Callus,
     Emailus,
-    Footer
+    Footer,
   },
   data: () => ({
     solutions_items: [
       { title: "Business Intelligence", page: "/businessIntelligence" },
       { title: "Application Management", page: "" },
       { title: "Infrastruture Management", page: "" },
-      { title: "Digital Experience", page: "" }
+      { title: "Digital Experience", page: "" },
     ],
     service_items: [
       { title: "Application Services", page: "/applicationService" },
-      { title: "Managed Cloud", page: "" },
-      { title: "Managed Hosting", page: "" },
-      { title: "Professional Service", page: "" }
+      { title: "Managed Cloud", page: "/managedCloud" },
+      { title: "Managed Hosting", page: "/managedHosting" },
+      { title: "Professional Service", page: "/professionalService" },
     ],
     platform_items: [
       { title: "Amazon Webervices", page: "/Aws" },
       { title: "Google Cloud Computing", page: "" },
       { title: "Infrastruture Management", page: "" },
-      { title: "Kubernetes platforms", page: "" }
+      { title: "Kubernetes platforms", page: "" },
     ],
     resource_items: [
       { title: "Resource Center", page: "/ResourceCenter" },
       { title: "Customer Stories", page: "" },
       { title: "Events", page: "" },
-      { title: "Technical Blog", page: "" }
+      { title: "Technical Blog", page: "" },
     ],
     training_items: [
       { title: "DevOps", page: "/DevOps" },
@@ -242,30 +270,29 @@ export default {
       { title: "GCP cloud practice", page: "" },
       { title: "Data Science", page: "" },
       { title: "Machine Learning", page: "" },
-      { title: "Internet Of Things", page: "" }
+      { title: "Internet Of Things", page: "" },
     ],
     partner_items: [
       { title: "Resource Center", page: "/Cloud" },
       { title: "Customer Stories", page: "" },
       { title: "Events", page: "" },
-      { title: "Technical Blog", page: "" }
+      { title: "Technical Blog", page: "" },
     ],
     about_items: [
       { title: "Resource Center", page: "/WhyAI" },
       { title: "Customer Stories", page: "" },
       { title: "Events", page: "" },
-      { title: "Technical Blog", page: "" }
+      { title: "Technical Blog", page: "" },
     ],
     user_items: [
-      { title: "Home", icon: "mdi-home-city", page: "/"},
-      { title: "My Account", icon: "mdi-account",page: "GilbertCook/profile" },
-      { title: "Users", icon: "mdi-account-group-outline" ,page: "/Users"}
+      { title: "Home", icon: "mdi-home-city", page: "/" },
+      { title: "My Account", icon: "mdi-account", page: "GilbertCook/profile" },
+      { title: "Users", icon: "mdi-account-group-outline", page: "/Users" },
     ],
     links: ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"],
-    
+
     dialog: false,
-     mini: true,
-     
+    mini: true,
   }),
   methods: {
     navigateAndIncrement() {
@@ -278,8 +305,8 @@ export default {
     },
     onScroll(e) {
       this.offsetTop = e.target.scrollTop;
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss">
