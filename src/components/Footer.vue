@@ -11,10 +11,15 @@
           class="grey white--text"
           :href="link.page"
           link="true"
-        >{{ link.title }}</v-btn>
-        
-        <strong small class="grey white--text" >© {{ new Date().getFullYear() }} - </strong>
-        <strong small class="grey white--text small">Copyright: AI Software Corporation.</strong>
+          >{{ link.title }}</v-btn
+        >
+
+        <strong small class="grey white--text"
+          >© {{ new Date().getFullYear() }} -
+        </strong>
+        <strong small class="grey white--text small"
+          >Copyright: AI Software Corporation.</strong
+        >
       </v-col>
     </v-row>
 
@@ -58,7 +63,7 @@ import {
   Reddit,
   Telegram,
   WhatsApp,
-  Email
+  Email,
 } from "vue-socialmedia-share";
 
 export default {
@@ -71,35 +76,35 @@ export default {
     WhatsApp,
     Pinterest,
     Reddit,
-    Email
+    Email,
   },
   data: () => ({
     socialmedia_links: [
       {
         title: "LinkedIn",
         icon: "mdi-linkedin-box",
-        url: "https://www.linkedin.com/company"
+        url: "https://www.linkedin.com/company",
       },
       {
         title: "Facebook",
         icon: "mdi-facebook-box",
-        url: "https://www.facebook.com/shoban.cheekuru"
+        url: "https://www.facebook.com/shoban.cheekuru",
       },
       {
         title: "Youtube",
         icon: "mdi-youtube",
-        url: "https://www.youtube.com/user/123shoban/videos"
+        url: "https://www.youtube.com/user/123shoban/videos",
       },
       {
         title: "Instagram",
         icon: "mdi-instagram",
-        url: "https://www.instagram.com/shobancs/"
+        url: "https://www.instagram.com/shobancs/",
       },
       {
         title: "Twitter",
         icon: "mdi-twitter-box",
-        url: "https://twitter.com/shobancs"
-      }
+        url: "https://twitter.com/shobancs",
+      },
     ],
     footer_links: [
       { title: "Privacy", page: "/Privacy" },
@@ -107,9 +112,9 @@ export default {
       { title: "Sitemap", page: "/SiteMap" },
       { title: "Terms of use", page: "/Privacy" },
       { title: "Feedback", page: "/" },
-      { title: "Cookie preferences", page: "/" }
+      { title: "Cookie preferences", page: "/" },
     ],
-    justify: ["start", "end", "center", "space-between", "space-around"]
-  })
+    justify: ["start", "end", "center", "space-between", "space-around"],
+  }),
 };
 </script>

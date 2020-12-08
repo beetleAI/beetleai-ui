@@ -21,6 +21,9 @@ import DigitalExperience from './views/solutions/DigitalExperience.vue'
 
 // Services
 import ApplicationService from './views/services/ApplicationService.vue'
+import ManagedCloud from './views/services/ManagedCloud.vue'
+import ManagedHosting from './views/services/ManagedHosting.vue'
+import ProfessionalService from './views/services/ProfessionalService.vue'
 
 // Platforms
 import Aws from './views/platforms/aws.vue'
@@ -81,6 +84,21 @@ export default new Router({
       path: '/ApplicationService',
       name: 'applicationService',
       component: ApplicationService
+    },
+    {
+      path: '/ManagedCloud',
+      name: 'managedCloud',
+      component: ManagedCloud
+    },
+    {
+      path: '/ManagedHosting',
+      name: 'managedHosting',
+      component: ManagedHosting
+    },
+    {
+      path: '/ProfessionalService',
+      name: 'professionalService',
+      component: ProfessionalService
     },
     {
       path: '/Aws',
