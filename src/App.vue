@@ -123,7 +123,7 @@
 
     <v-content
       id="scroll-target"
-      style="max-height:900px"
+      style="max-height:700px"
       class="overflow-y-auto "
       align="center"
       justify="center" 
@@ -212,9 +212,9 @@ export default {
   data: () => ({
     solutions_items: [
       { title: "Business Intelligence", page: "/businessIntelligence" },
-      { title: "Application Management", page: "" },
-      { title: "Infrastruture Management", page: "" },
-      { title: "Digital Experience", page: "" }
+      { title: "Application Management", page: "/ApplicationManagement" },
+      { title: "Infrastructure Management", page: "/InfrastrutureManagement" },
+      { title: "Digital Experience", page: "/DigitalExperience" }
     ],
     service_items: [
       { title: "Application Services", page: "/applicationService" },
@@ -283,6 +283,9 @@ export default {
 };
 </script>
 <style lang="scss">
+.v-application ul{
+padding:0px !important;
+}
 .v-application--wrap {
   display: block; /* fix for IE11 */
   font-family: inherit;
@@ -627,5 +630,6 @@ body,
 html {
   height: 100%;
 }
+
 </style>
 
