@@ -13,8 +13,11 @@ import UserMedia from './views/UserMedia.vue'
 import Error from './views/Error.vue'
 
 // AI labs View component
-// Solutions
+// Solutions  
 import BusinessIntelligence from './views/solutions/BusinessIntelligence.vue'
+import ApplicationManagement from './views/solutions/ApplicationManagement.vue'
+import InfrastrutureManagement from './views/solutions/InfrastrutureManagement.vue'
+import DigitalExperience from './views/solutions/DigitalExperience.vue'
 
 // Services
 import ApplicationService from './views/services/ApplicationService.vue'
@@ -62,6 +65,20 @@ export default new Router({
       path: '/BusinessIntelligence',
       name: 'businessIntelligence',
       component: BusinessIntelligence
+    },{
+      path: '/ApplicationManagement',
+      name: 'ApplicationManagement',
+      component: ApplicationManagement
+    },
+    {
+      path: '/InfrastrutureManagement',
+      name: 'InfrastrutureManagement',
+      component: InfrastrutureManagement
+    },
+    {
+      path: '/DigitalExperience',
+      name: 'DigitalExperience',
+      component: DigitalExperience
     },
     {
       path: '/ApplicationService',

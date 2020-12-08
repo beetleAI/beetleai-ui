@@ -61,7 +61,7 @@ export default {
   name: "RegisterUser",
 
   data: () => ({
-    dialog: true
+    dialog: false
   })
 };
 </script>

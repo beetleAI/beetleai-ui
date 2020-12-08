@@ -1,10 +1,133 @@
 
 <template>
-  <v-app>
-    <v-parallax
-      height="730"
-      src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-    >
+
+  <v-app >
+    
+<v-parallax
+    height="650"
+    src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
+  >
+    <v-app-bar app  absolute class="black">
+      <v-spacer>
+        <router-link to="/" class="header_logo">
+        <v-img src="@/assets/AISoftware.png" height="150px" width="150px">
+        </v-img>
+      </router-link>
+     
+
+      </v-spacer>
+      <v-spacer width="150px" right app dark class="black">
+        <div class="black"> 
+          <ul>
+            <li>
+              <v-menu  open-on-hover bottom offset-y>
+                <template v-slot:activator="{ on }">
+                  <v-btn class="black white--text" v-on="on">Solutions</v-btn>
+                </template>
+                <v-list>
+                  <v-list-item
+                    v-for="(item, index) in solutions_items"
+                    :key="index"
+                    :to="item.page"
+                  >
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </li>
+            <li>
+              <v-menu open-on-hover bottom offset-y>
+                <template v-slot:activator="{ on }">
+                  <v-btn class="black white--text" v-on="on">Services</v-btn>
+                </template>
+                <v-list>
+                  <v-list-item v-for="(item, index) in service_items" :key="index" :to="item.page">
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </li>
+            <li>
+              <v-menu open-on-hover bottom offset-y>
+                <template v-slot:activator="{ on }">
+                  <v-btn class="black white--text" v-on="on">Platforms</v-btn>
+                </template>
+                <v-list>
+                  <v-list-item v-for="(item, index) in platform_items" :key="index" :to="item.page">
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </li>
+            <li>
+              <v-menu open-on-hover bottom offset-y>
+                <template v-slot:activator="{ on }">
+                  <v-btn class="black white--text" v-on="on">Resources</v-btn>
+                </template>
+                <v-list>
+                  <v-list-item v-for="(item, index) in resource_items" :key="index" :to="item.page">
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </li>
+            <li>
+              <v-menu open-on-hover bottom offset-y>
+                <template v-slot:activator="{ on }">
+                  <v-btn class="black white--text" v-on="on">Trainings</v-btn>
+                </template>
+                <v-list>
+                  <v-list-item v-for="(item, index) in training_items" :key="index" :to="item.page">
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </li>
+            <li>
+              <v-menu open-on-hover bottom offset-y>
+                <template v-slot:activator="{ on }">
+                  <v-btn class="black white--text" v-on="on">Partners</v-btn>
+                </template>
+                <v-list>
+                  <v-list-item v-for="(item, index) in partner_items" :key="index" :to="item.page">
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </li>
+            <li>
+              <v-menu open-on-hover bottom offset-y>
+                <template v-slot:activator="{ on }">
+                  <v-btn class="black white--text" v-on="on">About</v-btn>
+                </template>
+                <v-list>
+                  <v-list-item v-for="(item, index) in about_items" :key="index" :to="item.page">
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                  </v-list-item>
+                </v-list>
+              </v-menu>
+            </li>
+          </ul>
+        </div>
+      </v-spacer>
+      <v-spacer><RegisterUser /> </v-spacer>
+      <v-spacer><Login /> </v-spacer>
+      <v-btn
+        href="https://github.com/shobancs/vue-heroku-project"
+        target="_blank"
+        text
+      >
+        <span class="mr-2 white--text">Code</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-content
+      id="scroll-target"
+      style="max-height:700px"
+      class="overflow-y-auto "
+      align="center"
+      justify="center">
       <v-app-bar app absolute class="black">
         <v-spacer>
           <router-link to="/" class="header_logo">
@@ -240,9 +363,9 @@ export default {
   data: () => ({
     solutions_items: [
       { title: "Business Intelligence", page: "/businessIntelligence" },
-      { title: "Application Management", page: "" },
-      { title: "Infrastruture Management", page: "" },
-      { title: "Digital Experience", page: "" },
+      { title: "Application Management", page: "/ApplicationManagement" },
+      { title: "Infrastructure Management", page: "/InfrastrutureManagement" },
+      { title: "Digital Experience", page: "/DigitalExperience" }
     ],
     service_items: [
       { title: "Application Services", page: "/applicationService" },
@@ -310,6 +433,9 @@ export default {
 };
 </script>
 <style lang="scss">
+.v-application ul{
+padding:0px !important;
+}
 .v-application--wrap {
   display: block; /* fix for IE11 */
   font-family: inherit;
@@ -654,5 +780,6 @@ body,
 html {
   height: 100%;
 }
+
 </style>
 

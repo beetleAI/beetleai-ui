@@ -1,7 +1,7 @@
 <template>
   <div class="page">
-    <h1 class="title">Business Intelligence</h1>
-      <p class="solution_content" >Business intelligence (BI) leverages software and services to transform data into actionable 
+    <h1 class="title">Infrastruture Management</h1>
+    <p class="solution_content" >Business intelligence (BI) leverages software and services to transform data into actionable 
        insights that inform an organization’s strategic and tactical business decisions. BI tools access
        and analyze data sets and present analytical findings in reports, summaries, dashboards, graphs,
        charts and maps to provide users with detailed intelligence about the state of the business.Business intelligence (BI) leverages software and services to transform data into actionable 
@@ -63,8 +63,6 @@
        insights that inform an organization’s strategic and tactical business decisions. BI tools access
        and analyze data sets and present analytical findings in reports, summaries, dashboards, graphs,
        charts and maps to provide users with detailed intelligence about the state of the business.</p>
-       
-             
     <div class="tweets" v-if="users && users.length">
       <div class="tweet tweet--user u-hover" v-for="(user, index) of users" v-bind:key="index">
         <router-link v-bind:to="{
@@ -109,4 +107,5 @@ export default {
 .solution_content{
   text-align:justify;
 }
+
 </style>
