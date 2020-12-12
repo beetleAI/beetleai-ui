@@ -4,7 +4,7 @@
   <v-app >
     
 <v-parallax
-    height="650"
+    height="721"
     src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
   >
     <v-app-bar app  absolute class="black">
@@ -264,6 +264,7 @@
           <v-icon>mdi-open-in-new</v-icon>
         </v-btn>
       </v-app-bar>
+    </v-content>
       <v-footer absolute class="font-weight-medium grey">
         <Footer />
       </v-footer>

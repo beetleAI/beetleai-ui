@@ -1,30 +1,25 @@
 <template>
-  <v-container class="grey">
-    <v-row justify="center" no-gutters app>
-      <v-col align="left" class="text-center" cols="12">
-        <v-btn
-          v-for="link in footer_links"
-          :key="link.title"
-          text
-          rounded
-          small
-          class="grey white--text"
-          :href="link.page"
-          link="true"
-          >{{ link.title }}</v-btn
-        >
-
-        <strong small class="grey white--text"
+  <v-container class="grey" style="padding: 0; text-align: center">
+      <v-btn
+        v-for="link in footer_links"
+        :key="link.title"
+        text
+        rounded
+        small
+        class="grey white--text"
+        :href="link.page"
+        link="true"
+        >{{ link.title }}</v-btn
+      >
+      <strong small class="grey white--text"
           >© {{ new Date().getFullYear() }} -
         </strong>
         <strong small class="grey white--text small"
           >Copyright: AI Software Corporation.</strong
         >
-      </v-col>
-    </v-row>
 
-    <v-row justify="center" no-gutters app>
-      <v-col align="left" class="text-center" cols="12">
+   <div>
+     <div style="float:left">
         <strong>Follow us:</strong>
         <a
           :href="link.url"
@@ -36,21 +31,22 @@
           rounded
           class="my-2"
         >
-          <v-icon>{{ link.icon }}</v-icon>
+          <v-icon style="font-size: 24px">{{ link.icon }}</v-icon>
         </a>
-
+        </div>
+        <div style="float: right">
         <strong>Share :</strong>
 
-        <facebook :url="url" scale="1.2"></facebook>
-        <twitter :url="url" title="Check me on Github" scale="1.2"></twitter>
-        <linkedin :url="url" scale="1.2"></linkedin>
-        <telegram :url="url" scale="1.2"></telegram>
-        <whats-app :url="url" title="Hello" scale="1.2"></whats-app>
-        <pinterest :url="url" scale="1.2"></pinterest>
-        <reddit :url="url" scale="1.2" title="My Github"></reddit>
-        <email :url="url" subject="Hello" scale="1.2"></email>
-      </v-col>
-    </v-row>
+        <facebook :url="url" style="padding: 5px"></facebook>
+        <twitter :url="url" title="Check me on Github" style="padding: 5px"></twitter>
+        <linkedin :url="url" style="padding: 5px"></linkedin>
+        <telegram :url="url" style="padding: 5px"></telegram>
+        <whats-app :url="url" title="Hello" style="padding: 5px"></whats-app>
+        <pinterest :url="url" style="padding: 5px"></pinterest>
+        <reddit :url="url" title="My Github" style="padding: 5px"></reddit>
+        <email :url="url" subject="Hello" style="padding: 5px"></email>
+        </div>
+   </div>
   </v-container>
 </template>
 
