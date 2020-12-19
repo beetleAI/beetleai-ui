@@ -1,17 +1,7 @@
 <template>
   <div class="page">
-    <h1 class="title">"{{ title }} Tweets"</h1>
-    <div class="nestedRoutes">
-      <h2 class="nestedRoutes_title">NestedRoutes</h2>
-      <div class="nestedRoutes_links">
-        <router-link v-bind:to="`/${$route.params.userId}`" class="u-hover">Tweets</router-link>
-        <router-link v-bind:to="`/${$route.params.userId}/media`" class="u-hover">Media</router-link>
-        <router-link v-bind:to="`/${$route.params.userId}/profile`" class="u-hover">profile</router-link>
-      </div>
-      <div class="nestedRoutes_view">
-        <router-view></router-view>
-      </div>
-    </div>
+    <h1 class="title">"{{ title }} Tweets Page"</h1>
+    
   </div>
 </template>
 

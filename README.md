@@ -1,4 +1,4 @@
-# BeetlAI Software Lab
+# BeetlAI - Artificial Intellegence Company
 
 ## Project pre-requisites
 
@@ -25,39 +25,7 @@ Signup [Github](https://docs.github.com/en/free-pro-team@latest/github/getting-s
 Install [NodeJS](https://nodejs.org/en/) which install npm too.
 
 
-### Install VueJS node module using npm tool.
 
-```bash
-C:\Users\cpm\AI>npm install --global vue-cli
-+ vue-cli@2.9.6
-updated 1 package in 246.719s
-```
-
-### Now, How to create vuejs project using VUE CLI
-
-```bash
-vue init webpack AI-LAB
-
-? Project name ailab
-? Project description A Vue.js project
-? Author PurushothamCheekuru <cheekuru.cvshp@gmail.com>
-? Vue build standalone
-? Install vue-router? Yes
-? Use ESLint to lint your code? Yes
-? Pick an ESLint preset Standard
-? Set up unit tests No
-? Setup e2e tests with Nightwatch? Yes
-? Should we run `npm install` for you after the project has been created? (recommended) npm
-
-   vue-cli · Generated "AILAB".
-```
-
-### How to run VUE application
-
-```bash
-C:\Users\cpm\AI>cd AILAB
-C:\Users\cpm\AI\AILAB>npm run dev
-```
 
 ----------------------
 ## How to Document your software faster?
@@ -72,23 +40,18 @@ Browse nodeJS installation [instructions](https://nodejs.org/en/download/) for y
 $ npm install --save-dev marked
 ```
 
-### Steps to build project
+### How to clone build and run BeetleAI project  VueJS node module using npm tool.
 
+```bash
+npm install  #This install vue-cli
+npm run-script build # this build porject will all dependencies
+npm run-script serve # will start node application
 
-
+```
 
 ----------------------------------------------------------
 
 
-## AI LAB
-
-> A Vue.js project
-
-### Build Setup
-
-``` bash
-Needs to add steps
-```
 ### How to debug VueJS apps
 
 Install and enable [VueJS Devtools](https://flaviocopes.com/vue-devtools/)  Chrome extension.

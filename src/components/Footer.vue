@@ -15,7 +15,7 @@
           >© {{ new Date().getFullYear() }} -
         </strong>
         <strong small class="grey white--text small"
-          >Copyright: AI Software Corporation.</strong
+          >Copyright: BeetleAI Solutions.</strong
         >
 
    <div>

@@ -12,7 +12,7 @@ import UserProfile from './views/UserProfile.vue'
 import UserMedia from './views/UserMedia.vue'
 import Error from './views/Error.vue'
 
-// AI labs View component
+// BeetleAI View component
 // Solutions  
 import BusinessIntelligence from './views/solutions/BusinessIntelligence.vue'
 import ApplicationManagement from './views/solutions/ApplicationManagement.vue'
@@ -28,17 +28,12 @@ import ProfessionalService from './views/services/ProfessionalService.vue'
 // Platforms
 import Aws from './views/platforms/aws.vue'
 
-// Resources
-import ResourceCenter from './views/resources/ResourceCenter.vue'
 
 // Trainings
 import DevOps from './views/trainings/DevOps.vue'
 
-// Partners
-import Cloud from './views/partners/Cloud.vue'
-
 // About
-import WhyAI from './views/about/WhyAILabs.vue'
+import WhyAI from './views/about/WhyBeetleAI.vue'
 
 // Footer
 import Privacy from './views/footer/Privacy.vue'
@@ -106,25 +101,17 @@ export default new Router({
       component: Aws
     },
 
-    {
-      path: '/ResourceCenter',
-      name: 'resourceCenter',
-      component: ResourceCenter
-    }, 
+    
 
     {
       path: '/DevOps',
       name: 'devOps',
       component: DevOps
     },
+ 
     {
-      path: '/Cloud',
-      name: 'cloud',
-      component: Cloud
-    },
-    {
-      path: '/WhyAI',
-      name: 'whyAI',
+      path: '/WhyBeetleAI',
+      name: 'WhyBeetleAI',
       component: WhyAI
     },
     //Footer links routers

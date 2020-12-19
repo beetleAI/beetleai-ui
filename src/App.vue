@@ -38,10 +38,10 @@
             <li>
               <v-menu open-on-hover bottom offset-y>
                 <template v-slot:activator="{ on }">
-                  <v-btn class="black white--text" v-on="on">Services</v-btn>
+                  <v-btn class="black white--text" v-on="on">Products</v-btn>
                 </template>
                 <v-list>
-                  <v-list-item v-for="(item, index) in service_items" :key="index" :to="item.page">
+                  <v-list-item v-for="(item, index) in beetle_products_items" :key="index" :to="item.page">
                     <v-list-item-title>{{ item.title }}</v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -59,18 +59,7 @@
                 </v-list>
               </v-menu>
             </li>
-            <li>
-              <v-menu open-on-hover bottom offset-y>
-                <template v-slot:activator="{ on }">
-                  <v-btn class="black white--text" v-on="on">Resources</v-btn>
-                </template>
-                <v-list>
-                  <v-list-item v-for="(item, index) in resource_items" :key="index" :to="item.page">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </li>
+            
             <li>
               <v-menu open-on-hover bottom offset-y>
                 <template v-slot:activator="{ on }">
@@ -83,18 +72,7 @@
                 </v-list>
               </v-menu>
             </li>
-            <li>
-              <v-menu open-on-hover bottom offset-y>
-                <template v-slot:activator="{ on }">
-                  <v-btn class="black white--text" v-on="on">Partners</v-btn>
-                </template>
-                <v-list>
-                  <v-list-item v-for="(item, index) in partner_items" :key="index" :to="item.page">
-                    <v-list-item-title>{{ item.title }}</v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-menu>
-            </li>
+            
             <li>
               <v-menu open-on-hover bottom offset-y>
                 <template v-slot:activator="{ on }">
@@ -110,10 +88,10 @@
           </ul>
         </div>
       </v-spacer>
-      <v-spacer><RegisterUser /> </v-spacer>
+      
       <v-spacer><Login /> </v-spacer>
       <v-btn
-        href="https://github.com/shobancs/vue-heroku-project"
+        href="https://github.com/beetleAI/beetleai-ui"
         target="_blank"
         text
       >
@@ -157,11 +135,11 @@
               <li>
                 <v-menu open-on-hover bottom offset-y>
                   <template v-slot:activator="{ on }">
-                    <v-btn class="black white--text" v-on="on">Services</v-btn>
+                    <v-btn class="black white--text" v-on="on">Products</v-btn>
                   </template>
                   <v-list>
                     <v-list-item
-                      v-for="(item, index) in service_items"
+                      v-for="(item, index) in beetle_products_items"
                       :key="index"
                       :to="item.page"
                     >
@@ -186,22 +164,7 @@
                   </v-list>
                 </v-menu>
               </li>
-              <li>
-                <v-menu open-on-hover bottom offset-y>
-                  <template v-slot:activator="{ on }">
-                    <v-btn class="black white--text" v-on="on">Resources</v-btn>
-                  </template>
-                  <v-list>
-                    <v-list-item
-                      v-for="(item, index) in resource_items"
-                      :key="index"
-                      :to="item.page"
-                    >
-                      <v-list-item-title>{{ item.title }}</v-list-item-title>
-                    </v-list-item>
-                  </v-list>
-                </v-menu>
-              </li>
+              
               <li>
                 <v-menu open-on-hover bottom offset-y>
                   <template v-slot:activator="{ on }">
@@ -218,22 +181,7 @@
                   </v-list>
                 </v-menu>
               </li>
-              <li>
-                <v-menu open-on-hover bottom offset-y>
-                  <template v-slot:activator="{ on }">
-                    <v-btn class="black white--text" v-on="on">Partners</v-btn>
-                  </template>
-                  <v-list>
-                    <v-list-item
-                      v-for="(item, index) in partner_items"
-                      :key="index"
-                      :to="item.page"
-                    >
-                      <v-list-item-title>{{ item.title }}</v-list-item-title>
-                    </v-list-item>
-                  </v-list>
-                </v-menu>
-              </li>
+              
               <li>
                 <v-menu open-on-hover bottom offset-y>
                   <template v-slot:activator="{ on }">
@@ -256,7 +204,7 @@
         <v-spacer><RegisterUser /> </v-spacer>
         <v-spacer><Login /> </v-spacer>
         <v-btn
-          href="https://github.com/shobancs/vue-heroku-project"
+          href="https://github.com/beetleAI/beetleai-ui"
           target="_blank"
           text
         >
@@ -362,51 +310,43 @@ export default {
     Footer,
   },
   data: () => ({
+    beetle_products_items: [
+      { title: "BeetleAI Shop", page: "/applicationService" },
+      { title: "Farmers Cart", page: "/managedCloud" },
+      { title: "Data Science", page: "/managedHosting" },
+      { title: "Machine Learning", page: "/professionalService" },
+    ],
     solutions_items: [
-      { title: "Business Intelligence", page: "/businessIntelligence" },
-      { title: "Application Management", page: "/ApplicationManagement" },
-      { title: "Infrastructure Management", page: "/InfrastrutureManagement" },
-      { title: "Digital Experience", page: "/DigitalExperience" }
+      { title: "Cloud", page: "/businessIntelligence" },
+      { title: "Applications", page: "/ApplicationManagement" },
+      { title: "Security", page: "/InfrastrutureManagement" },
+      { title: "Data", page: "/DigitalExperience" }
     ],
-    service_items: [
-      { title: "Application Services", page: "/applicationService" },
-      { title: "Managed Cloud", page: "/managedCloud" },
-      { title: "Managed Hosting", page: "/managedHosting" },
-      { title: "Professional Service", page: "/professionalService" },
-    ],
+    
     platform_items: [
       { title: "Amazon Webervices", page: "/Aws" },
+      { title: "Azure Cloud", page: "" },
       { title: "Google Cloud Computing", page: "" },
-      { title: "Infrastruture Management", page: "" },
       { title: "Kubernetes platforms", page: "" },
     ],
-    resource_items: [
-      { title: "Resource Center", page: "/ResourceCenter" },
-      { title: "Customer Stories", page: "" },
-      { title: "Events", page: "" },
-      { title: "Technical Blog", page: "" },
-    ],
+    
     training_items: [
+      { title: "AWS Cloud practice", page: "" },
+      { title: "Azure Cloud practice", page: "" },
+      { title: "GCP cloud practice", page: "" },
       { title: "DevOps", page: "/DevOps" },
       { title: "Programming Languages", page: "" },
-      { title: "AWS Cloud practice", page: "" },
-      { title: "MS Azure Cloud practice", page: "" },
-      { title: "GCP cloud practice", page: "" },
       { title: "Data Science", page: "" },
       { title: "Machine Learning", page: "" },
       { title: "Internet Of Things", page: "" },
     ],
-    partner_items: [
-      { title: "Resource Center", page: "/Cloud" },
-      { title: "Customer Stories", page: "" },
-      { title: "Events", page: "" },
-      { title: "Technical Blog", page: "" },
-    ],
+    
     about_items: [
-      { title: "Resource Center", page: "/WhyAI" },
-      { title: "Customer Stories", page: "" },
-      { title: "Events", page: "" },
-      { title: "Technical Blog", page: "" },
+      { title: "Why BeetleAI", page: "/WhyBeetleAI" },
+      { title: "About Us", page: "/AboutBeetleAI" },
+      { title: "Core Culture", page: "/BeetleCoreValues" },
+      { title: "Career", page: "/BeetleAICareer" },
+      
     ],
     user_items: [
       { title: "Home", icon: "mdi-home-city", page: "/" },
