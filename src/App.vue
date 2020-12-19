@@ -110,7 +110,12 @@
           </ul>
         </div>
       </v-spacer>
-      <v-spacer><RegisterUser /> </v-spacer>
+      <v-spacer>
+       <router-link to="/RegisterUserPage" >
+          <v-btn class="black white--text" v-on="on">Register</v-btn>
+      </router-link>
+
+      </v-spacer>
       <v-spacer><Login /> </v-spacer>
       <v-btn
         href="https://github.com/shobancs/vue-heroku-project"
@@ -253,7 +258,12 @@
             </ul>
           </div>
         </v-spacer>
-        <v-spacer><RegisterUser /> </v-spacer>
+        <v-spacer>
+       <router-link to="RegisterUserPage" >
+            <v-btn class="black white--text" v-on="on">Register</v-btn>
+      </router-link>
+
+      </v-spacer>
         <v-spacer><Login /> </v-spacer>
         <v-btn
           href="https://github.com/shobancs/vue-heroku-project"
@@ -351,7 +361,6 @@ import RegisterUser from "./components/RegisterUser";
 import Callus from "./components/Callus";
 import Emailus from "./components/Emailus";
 import Footer from "./components/Footer";
-
 export default {
   name: "app",
   components: {
@@ -359,7 +368,7 @@ export default {
     RegisterUser,
     Callus,
     Emailus,
-    Footer,
+    Footer
   },
   data: () => ({
     solutions_items: [
@@ -413,7 +422,7 @@ export default {
       { title: "My Account", icon: "mdi-account", page: "GilbertCook/profile" },
       { title: "Users", icon: "mdi-account-group-outline", page: "/Users" },
     ],
-    links: ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"],
+    links: ["Home", "About Us", "Team", "Services", "Blog", "Contact Us" ],
 
     dialog: false,
     mini: true,

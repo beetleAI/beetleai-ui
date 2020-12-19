@@ -46,7 +46,7 @@ import Legal from './views/footer/Legal.vue'
 import SiteMap from './views/footer/SiteMap.vue'
 
 
-
+import RegisterUserPage from './views/register/RegisterUserPage.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -74,6 +74,10 @@ export default new Router({
       path: '/InfrastrutureManagement',
       name: 'InfrastrutureManagement',
       component: InfrastrutureManagement
+    },{
+      path: '/RegisterUserPage',
+      name: 'RegisterUserPage',
+      component: RegisterUserPage
     },
     {
       path: '/DigitalExperience',
@@ -143,7 +147,7 @@ export default new Router({
       name: 'siteMap',
       component: SiteMap
     },
-
+    
     {
       path: '/directAccess',
       name: 'directAccess',

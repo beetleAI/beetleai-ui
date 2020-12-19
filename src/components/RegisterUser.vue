@@ -14,34 +14,34 @@
         <v-container>
           <v-row>
             <v-col cols="12" sm="6" md="4">
-              <v-text-field label="Legal first name*" required></v-text-field>
+              <v-text-field label="Legal first name*" v-model.trim="firstname" required></v-text-field>
             </v-col>
             <v-col cols="12" sm="6" md="4">
-              <v-text-field label="Legal middle name" hint="example of helper text only on focus"></v-text-field>
+              <v-text-field label="Legal middle name" v-model.trim="middlename" hint="example of helper text only on focus"></v-text-field>
             </v-col>
             <v-col cols="12" sm="6" md="4">
               <v-text-field
                 label="Legal last name*"
                 hint="example of persistent helper text"
                 persistent-hint
-                required
+                required v-model.trim="lastname"
               ></v-text-field>
             </v-col>
             <v-col cols="12">
-              <v-text-field label="Email*" required></v-text-field>
+              <v-text-field label="Email*" v-model.trim="email" required></v-text-field>
             </v-col>
             <v-col cols="12">
-              <v-text-field label="Password*" type="password" required></v-text-field>
+              <v-text-field label="Password*" type="password" v-model.trim="password" required></v-text-field>
             </v-col>
             <v-col cols="12" sm="6">
-              <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" required></v-select>
+              <v-select :items="['0-17', '18-29', '30-54', '54+']" label="Age*" v-model.trim="age" required></v-select>
             </v-col>
             <v-col cols="12" sm="6">
               <v-autocomplete
                 :items="['Skiing', 'Ice hockey', 'Soccer', 'Basketball', 'Hockey', 'Reading', 'Writing', 'Coding', 'Basejump']"
                 label="Interests"
                 multiple
-              ></v-autocomplete>
+               v-model.trim="interests"></v-autocomplete>
             </v-col>
           </v-row>
         </v-container>
@@ -50,7 +50,7 @@
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn color="blue darken-1" text @click="dialog = false">Close</v-btn>
-        <v-btn color="blue darken-1" text @click="dialog = true">Save</v-btn>
+        <v-btn  v-on:click="authenticate()" color="blue darken-1" text @click="register = true">Register</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -60,8 +60,21 @@
 export default {
   name: "RegisterUser",
 
-  data: () => ({
+  data: () => ( {
+    firstname: '',
+    middlename:'',
+    lastname:'',
+    email: '',
+    password: '',
+    age:'',
+    interests:'',
+    error:null
+
+  },
+  {
     dialog: false
-  })
+  }),
+
+  
 };
 </script>

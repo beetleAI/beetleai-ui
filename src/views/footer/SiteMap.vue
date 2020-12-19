@@ -208,12 +208,12 @@
          <div class="sitemap_header col-sm-3" >
             <ul class="sitemap">
                <li>
-                  <router-link to="/components/RegisterUser">
+                  <router-link to="/Users">
                      <h3>REGISTER</h3>
                   </router-link>
                </li>
                <li>
-                  <router-link to="./components/Login">
+                  <router-link to="Login">
                      <h3>LOGIN</h3>
                   </router-link>
                </li>
