@@ -13,6 +13,7 @@ import UserMedia from './views/UserMedia.vue'
 import Error from './views/Error.vue'
 
 // BeetleAI View component
+
 // Solutions  
 import CloudSolutions from './views/solutions/CloudSolutions.vue'
 import ApplicationManagement from './views/solutions/ApplicationManagement.vue'
@@ -50,6 +51,9 @@ import BeetleAICareers from './views/about/BeetleAICareers.vue'
 import Privacy from './views/footer/Privacy.vue'
 import Legal from './views/footer/Legal.vue'
 import SiteMap from './views/footer/SiteMap.vue'
+import CookiePreference from './views/footer/CookiePreference.vue'
+import Terms from './views/footer/Terms.vue'
+import Feedback from './views/footer/Feedback.vue'
 
 
 
@@ -196,10 +200,22 @@ export default new Router({
     },
 
     {
-      path: '/directAccess',
-      name: 'directAccess',
-      component: DirectAccess
+      path: '/Terms',
+      name: 'terms',
+      component: Terms
     },
+    {
+      path: '/CookiePreference',
+      name: 'CookiePreference',
+      component: CookiePreference
+    },
+    {
+      path: '/Feedback',
+      name: 'Feedback',
+      component: Feedback
+    },
+
+
     {
       path: '/users',
       name: 'users',

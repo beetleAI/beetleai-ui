@@ -246,9 +246,7 @@
         <template v-slot:prepend>
           <v-list-item two-line>
             <v-list-item-avatar>
-              <img
-                src="https://e3zine.com/wp-content/uploads/2019/10/shutterstock_1111223003web.jpg"
-              />
+              <img src="https://e3zine.com/wp-content/uploads/2019/10/shutterstock_1111223003web.jpg"/>
             </v-list-item-avatar>
 
             <v-list-item-content>
