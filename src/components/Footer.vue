@@ -1,5 +1,20 @@
 <template>
   <v-container class="grey" style="padding: 0; text-align: center">
+      <div style="float:left">
+    
+        <a
+          :href="link.url"
+          :title="link.title"
+          target="_blank"
+          v-for="link in socialmedia_links"
+          :key="link.title"
+          text
+          rounded
+          class="my-2"
+        >
+          <v-icon style="font-size: 24px">{{ link.icon }}</v-icon>
+        </a>
+        </div>
       <v-btn
         v-for="link in footer_links"
         :key="link.title"
@@ -14,39 +29,7 @@
       <strong small class="grey white--text"
           >© {{ new Date().getFullYear() }} -
         </strong>
-        <strong small class="grey white--text small"
-          >Copyright: BeetleAI Solutions.</strong
-        >
-
-   <div>
-     <div style="float:left">
-        <strong>Follow us:</strong>
-        <a
-          :href="link.url"
-          :title="link.title"
-          target="_blank"
-          v-for="link in socialmedia_links"
-          :key="link.title"
-          text
-          rounded
-          class="my-2"
-        >
-          <v-icon style="font-size: 24px">{{ link.icon }}</v-icon>
-        </a>
-        </div>
-        <div style="float: right">
-        <strong>Share :</strong>
-
-        <facebook :url="url" style="padding: 5px"></facebook>
-        <twitter :url="url" title="Check me on Github" style="padding: 5px"></twitter>
-        <linkedin :url="url" style="padding: 5px"></linkedin>
-        <telegram :url="url" style="padding: 5px"></telegram>
-        <whats-app :url="url" title="Hello" style="padding: 5px"></whats-app>
-        <pinterest :url="url" style="padding: 5px"></pinterest>
-        <reddit :url="url" title="My Github" style="padding: 5px"></reddit>
-        <email :url="url" subject="Hello" style="padding: 5px"></email>
-        </div>
-   </div>
+        <strong small class="grey white--text small">Copyright: BeetleAI Solutions.</strong>
   </v-container>
 </template>
 

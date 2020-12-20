@@ -10,7 +10,7 @@
     <v-app-bar app  absolute class="black">
       <v-spacer>
         <router-link to="/" class="header_logo">
-        <v-img src="@/assets/AISoftware.png" height="150px" width="150px">
+        <v-img src="@/assets/BeetleAI-logo-12202020.png" height="150px" width="150px">
         </v-img>
       </router-link>
      
@@ -201,7 +201,7 @@
             </ul>
           </div>
         </v-spacer>
-        <v-spacer><RegisterUser /> </v-spacer>
+        
         <v-spacer><Login /> </v-spacer>
         <v-btn
           href="https://github.com/beetleAI/beetleai-ui"
@@ -317,10 +317,11 @@ export default {
       { title: "Machine Learning", page: "/professionalService" },
     ],
     solutions_items: [
-      { title: "Cloud", page: "/businessIntelligence" },
+      { title: "Cloud", page: "/CloudSolutions" },
       { title: "Applications", page: "/ApplicationManagement" },
-      { title: "Security", page: "/InfrastrutureManagement" },
-      { title: "Data", page: "/DigitalExperience" }
+      { title: "Security", page: "/SecuritySolutions" },
+      { title: "Data", page: "/DataSolutions" },
+      { title: "IT Service", page: "/ITService" }
     ],
     
     platform_items: [

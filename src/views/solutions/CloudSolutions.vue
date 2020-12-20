@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <h1 class="title">Business Intelligence</h1>
+    <h1 class="title">Cloud Solutions</h1>
       <p class="solution_content" >Business intelligence (BI) leverages software and services to transform data into actionable 
        insights that inform an organization’s strategic and tactical business decisions. BI tools access
        and analyze data sets and present analytical findings in reports, summaries, dashboards, graphs,

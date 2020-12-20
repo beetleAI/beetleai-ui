@@ -14,10 +14,11 @@ import Error from './views/Error.vue'
 
 // BeetleAI View component
 // Solutions  
-import BusinessIntelligence from './views/solutions/BusinessIntelligence.vue'
+import CloudSolutions from './views/solutions/CloudSolutions.vue'
 import ApplicationManagement from './views/solutions/ApplicationManagement.vue'
-import InfrastrutureManagement from './views/solutions/InfrastrutureManagement.vue'
-import DigitalExperience from './views/solutions/DigitalExperience.vue'
+import SecuritySolutions from './views/solutions/SecuritySolutions.vue'
+import DataSolutions from './views/solutions/DataSolutions.vue'
+import ITService from './views/solutions/ITService.vue'
 
 // Services
 import ApplicationService from './views/services/ApplicationService.vue'
@@ -57,23 +58,28 @@ export default new Router({
       }
     },
     {
-      path: '/BusinessIntelligence',
-      name: 'businessIntelligence',
-      component: BusinessIntelligence
+      path: '/CloudSolutions',
+      name: 'CloudSolutions',
+      component: CloudSolutions
     },{
       path: '/ApplicationManagement',
       name: 'ApplicationManagement',
       component: ApplicationManagement
     },
     {
-      path: '/InfrastrutureManagement',
-      name: 'InfrastrutureManagement',
-      component: InfrastrutureManagement
+      path: '/SecuritySolutions',
+      name: 'SecuritySolutions',
+      component: SecuritySolutions
     },
     {
-      path: '/DigitalExperience',
-      name: 'DigitalExperience',
-      component: DigitalExperience
+      path: '/DataSolutions',
+      name: 'DataSolutions',
+      component: DataSolutions
+    },
+    {
+      path: '/ITService',
+      name: 'ITService',
+      component: ITService
     },
     {
       path: '/ApplicationService',

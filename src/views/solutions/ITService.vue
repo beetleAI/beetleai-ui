@@ -1,7 +1,7 @@
 <template>
   <div class="page">
-    <h1 class="title">DigitalExperience</h1>
-     <p class="solution_content" >Business intelligence (BI) leverages software and services to transform data into actionable 
+    <h1 class="title">IT Service</h1>
+    <p class="solution_content" >Business intelligence (BI) leverages software and services to transform data into actionable 
        insights that inform an organization’s strategic and tactical business decisions. BI tools access
        and analyze data sets and present analytical findings in reports, summaries, dashboards, graphs,
        charts and maps to provide users with detailed intelligence about the state of the business.Business intelligence (BI) leverages software and services to transform data into actionable 
@@ -43,7 +43,7 @@
        and analyze data sets and present analytical findings in reports, summaries, dashboards, graphs,
        charts and maps to provide users with detailed intelligence about the state of the business.</p>
 
-      <p class="solution_content" >Business intelligence (BI) leverages software and services to transform data into actionable 
+          <p class="solution_content" >Business intelligence (BI) leverages software and services to transform data into actionable 
        insights that inform an organization’s strategic and tactical business decisions. BI tools access
        and analyze data sets and present analytical findings in reports, summaries, dashboards, graphs,
        charts and maps to provide users with detailed intelligence about the state of the business.Business intelligence (BI) leverages software and services to transform data into actionable 
@@ -102,6 +102,7 @@ export default {
   }
 }
 </script>
+
 <style>
 .solution_content{
   text-align:justify;
