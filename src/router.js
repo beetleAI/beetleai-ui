@@ -20,21 +20,31 @@ import SecuritySolutions from './views/solutions/SecuritySolutions.vue'
 import DataSolutions from './views/solutions/DataSolutions.vue'
 import ITService from './views/solutions/ITService.vue'
 
-// Services
-import ApplicationService from './views/services/ApplicationService.vue'
-import ManagedCloud from './views/services/ManagedCloud.vue'
-import ManagedHosting from './views/services/ManagedHosting.vue'
-import ProfessionalService from './views/services/ProfessionalService.vue'
+// Products
+import BeetleAIShop from './views/products/BeetleAIShop.vue'
+import DataScience from './views/products/DataScience.vue'
+import MachineLearning from './views/products/MachineLearning.vue'
 
 // Platforms
-import Aws from './views/platforms/aws.vue'
+import AWS from './views/platforms/AWS.vue'
+import Azure from './views/platforms/Azure.vue'
+import GCP from './views/platforms/GCP.vue'
+import Kubernetes from './views/platforms/Kubernetes.vue'
 
 
 // Trainings
-import DevOps from './views/trainings/DevOps.vue'
+import AWSTraining from './views/trainings/AWSTraining.vue'
+import AzureTraining from './views/trainings/AzureTraining.vue'
+import GoogleCloudTraining from './views/trainings/GoogleCloudTraining.vue'
+import DevOpsTraining from './views/trainings/DevOpsTraining.vue'
+import KubernetesTraining from './views/trainings/KubernetesTraining.vue'
+
 
 // About
-import WhyAI from './views/about/WhyBeetleAI.vue'
+import WhyBeetleAI from './views/about/WhyBeetleAI.vue'
+import AboutBeetleAI from './views/about/AboutBeetleAI.vue'
+import BeetleAICoreCulture from './views/about/BeetleAICoreCulture.vue'
+import BeetleAICareers from './views/about/BeetleAICareers.vue'
 
 // Footer
 import Privacy from './views/footer/Privacy.vue'
@@ -82,44 +92,92 @@ export default new Router({
       component: ITService
     },
     {
-      path: '/ApplicationService',
-      name: 'applicationService',
-      component: ApplicationService
+      path: '/BeetleAIShop',
+      name: 'BeetleAIShop',
+      component: BeetleAIShop
     },
     {
-      path: '/ManagedCloud',
-      name: 'managedCloud',
-      component: ManagedCloud
+      path: '/DataScience',
+      name: 'DataScience',
+      component: DataScience
     },
     {
-      path: '/ManagedHosting',
-      name: 'managedHosting',
-      component: ManagedHosting
+      path: '/MachineLearning',
+      name: 'MachineLearning',
+      component: MachineLearning
+    },
+    //Platoforms Support
+    {
+      path: '/AWS',
+      name: 'AWS',
+      component: AWS
     },
     {
-      path: '/ProfessionalService',
-      name: 'professionalService',
-      component: ProfessionalService
+      path: '/Azure',
+      name: 'Azure',
+      component: Azure
     },
     {
-      path: '/Aws',
-      name: 'aws',
-      component: Aws
+      path: '/GCP',
+      name: 'GCP',
+      component: GCP
     },
-
+    {
+      path: '/Kubernetes',
+      name: 'Kubernetes',
+      component: Kubernetes
+    },
     
+    //Trianing
 
     {
-      path: '/DevOps',
-      name: 'devOps',
-      component: DevOps
+      path: '/AWSTraining',
+      name: 'AWSTraining',
+      component: AWSTraining
     },
- 
+    {
+      path: '/AzureTraining',
+      name: 'AzureTraining',
+      component: AzureTraining
+    },
+    {
+      path: '/GoogleCloudTraining',
+      name: 'GoogleCloudTraining',
+      component: GoogleCloudTraining
+    },
+    {
+      path: '/DevOpsTraining',
+      name: 'DevOpsTraining',
+      component: DevOpsTraining
+    },
+    {
+      path: '/KubernetesTraining',
+      name: 'KubernetesTraining',
+      component: KubernetesTraining
+    },
+ //About
     {
       path: '/WhyBeetleAI',
       name: 'WhyBeetleAI',
-      component: WhyAI
+      component: WhyBeetleAI
     },
+    {
+      path: '/AboutBeetleAI',
+      name: 'AboutBeetleAI',
+      component: AboutBeetleAI
+    },
+    {
+      path: '/BeetleAICoreCulture',
+      name: 'BeetleAICoreCulture',
+      component: BeetleAICoreCulture
+    },
+    {
+      path: '/BeetleAICareers',
+      name: 'BeetleAICareers',
+      component: BeetleAICareers
+    },
+
+
     //Footer links routers
     {
       path: '/Privacy',

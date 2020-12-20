@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <h1 class="title">Application Service Page</h1>
+    <h1 class="title">BeetleAI Core Culture</h1>
     <div class="tweets" v-if="users && users.length">
       <div class="tweet tweet--user u-hover" v-for="(user, index) of users" v-bind:key="index">
         <router-link v-bind:to="{

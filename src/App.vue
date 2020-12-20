@@ -4,9 +4,9 @@
   <v-app >
     
 <v-parallax
-    height="721"
+    height="100%"
     src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-  >
+>
     <v-app-bar app  absolute class="black">
       <v-spacer>
         <router-link to="/" class="header_logo">
@@ -91,10 +91,7 @@
       
       <v-spacer><Login /> </v-spacer>
       <v-btn
-        href="https://github.com/beetleAI/beetleai-ui"
-        target="_blank"
-        text
-      >
+        href="https://github.com/beetleAI/beetleai-ui" target="_blank" text>
         <span class="mr-2 white--text">Code</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
@@ -102,7 +99,7 @@
 
     <v-content
       id="scroll-target"
-      style="max-height:700px"
+      style="max-height:100%"
       class="overflow-y-auto "
       align="center"
       justify="center">
@@ -311,10 +308,9 @@ export default {
   },
   data: () => ({
     beetle_products_items: [
-      { title: "BeetleAI Shop", page: "/applicationService" },
-      { title: "Farmers Cart", page: "/managedCloud" },
-      { title: "Data Science", page: "/managedHosting" },
-      { title: "Machine Learning", page: "/professionalService" },
+      { title: "BeetleAI Shop", page: "/BeetleAIShop" },
+      { title: "Data Science", page: "/DataScience" },
+      { title: "Machine Learning", page: "/MachineLearning" },
     ],
     solutions_items: [
       { title: "Cloud", page: "/CloudSolutions" },
@@ -325,28 +321,25 @@ export default {
     ],
     
     platform_items: [
-      { title: "Amazon Webervices", page: "/Aws" },
-      { title: "Azure Cloud", page: "" },
-      { title: "Google Cloud Computing", page: "" },
-      { title: "Kubernetes platforms", page: "" },
+      { title: "Amazon Webervices", page: "/AWS" },
+      { title: "Azure Cloud", page: "/AZURE" },
+      { title: "Google Cloud Computing", page: "/GCP" },
+      { title: "Kubernetes platforms", page: "/Kubernetes" },
     ],
     
     training_items: [
-      { title: "AWS Cloud practice", page: "" },
-      { title: "Azure Cloud practice", page: "" },
-      { title: "GCP cloud practice", page: "" },
-      { title: "DevOps", page: "/DevOps" },
-      { title: "Programming Languages", page: "" },
-      { title: "Data Science", page: "" },
-      { title: "Machine Learning", page: "" },
-      { title: "Internet Of Things", page: "" },
+      { title: "AWS Cloud practice", page: "/AWSTraining" },
+      { title: "Azure Cloud practice", page: "/AzureTraining" },
+      { title: "GCP cloud practice", page: "/GoogleCloudTraining" },
+      { title: "DevOps", page: "/DevOpsTraining" },
+      { title: "Kuebrnetes", page: "/KubernetesTraining" }
     ],
     
     about_items: [
       { title: "Why BeetleAI", page: "/WhyBeetleAI" },
       { title: "About Us", page: "/AboutBeetleAI" },
-      { title: "Core Culture", page: "/BeetleCoreValues" },
-      { title: "Career", page: "/BeetleAICareer" },
+      { title: "Core Culture", page: "/BeetleAICoreCulture" },
+      { title: "Careers", page: "/BeetleAICareers" },
       
     ],
     user_items: [
