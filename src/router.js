@@ -27,7 +27,7 @@ import DataScience from './views/products/DataScience.vue'
 import MachineLearning from './views/products/MachineLearning.vue'
 
 // Platforms
-import AWS from './views/platforms/AWS.vue'
+import Aws from './views/platforms/AWS.vue'
 import Azure from './views/platforms/Azure.vue'
 import GCP from './views/platforms/GCP.vue'
 import Kubernetes from './views/platforms/Kubernetes.vue'
@@ -112,9 +112,9 @@ export default new Router({
     },
     //Platoforms Support
     {
-      path: '/AWS',
-      name: 'AWS',
-      component: AWS
+      path: '/Aws',
+      name: 'Aws',
+      component: Aws
     },
     {
       path: '/Azure',
