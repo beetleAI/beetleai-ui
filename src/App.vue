@@ -320,7 +320,7 @@ export default {
     
     platform_items: [
       { title: "Amazon Webervices", page: "/AWS" },
-      { title: "Azure Cloud", page: "/AZURE" },
+      { title: "Azure Cloud", page: "/Azure" },
       { title: "Google Cloud Computing", page: "/GCP" },
       { title: "Kubernetes platforms", page: "/Kubernetes" },
     ],
