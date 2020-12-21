@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from './views/Home.vue'
-import DirectAccess from './views/DirectAccess.vue'
 import TweetModal from './views/TweetModal.vue'
 import TweetSingle from './views/TweetSingle.vue'
 import Users from './views/Users.vue'
@@ -13,7 +12,6 @@ import UserMedia from './views/UserMedia.vue'
 import Error from './views/Error.vue'
 
 // BeetleAI View component
-
 // Solutions  
 import CloudSolutions from './views/solutions/CloudSolutions.vue'
 import ApplicationManagement from './views/solutions/ApplicationManagement.vue'
@@ -27,7 +25,7 @@ import DataScience from './views/products/DataScience.vue'
 import MachineLearning from './views/products/MachineLearning.vue'
 
 // Platforms
-import Aws from './views/platforms/aws.vue'
+import AWS from './views/platforms/aws.vue'
 import Azure from './views/platforms/Azure.vue'
 import GCP from './views/platforms/GCP.vue'
 import Kubernetes from './views/platforms/Kubernetes.vue'
@@ -54,7 +52,6 @@ import SiteMap from './views/footer/SiteMap.vue'
 import CookiePreference from './views/footer/CookiePreference.vue'
 import Terms from './views/footer/Terms.vue'
 import Feedback from './views/footer/Feedback.vue'
-
 
 
 Vue.use(Router)
@@ -112,9 +109,9 @@ export default new Router({
     },
     //Platoforms Support
     {
-      path: '/Aws',
-      name: 'Aws',
-      component: Aws
+      path: '/AWS',
+      name: 'AWS',
+      component: AWS
     },
     {
       path: '/Azure',
@@ -211,7 +208,7 @@ export default new Router({
     },
     {
       path: '/Feedback',
-      name: 'Feedback',
+      name: 'feedback',
       component: Feedback
     },
 
